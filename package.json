@@ -1,0 +1,11 @@
+{
+  "name": "float-inbox",
+  "productName": "浮笺",
+  "version": "0.1.0",
+  "private": true,
+  "main": "app/main.cjs",
+  "scripts": {
+    "start": "electron .",
+    "test": "node --test"
+  }
+}
