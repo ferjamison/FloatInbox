@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self';"><title>浮笺 · 桌面收件箱</title><link rel="stylesheet" href="style.css"></head><body>
+<button id="pill" hidden title="展开历史记录"><span class="sig">▧</span> 浮笺 <b>‹</b></button>
+<main>
+<header><span class="sig">▧</span><strong>浮笺</strong><span class="subtitle">桌面收件箱</span><div class="spacer"></div><button id="settings" title="设置" aria-label="设置">⚙</button><button id="fold" title="收起到边缘" aria-label="收起到边缘">›</button></header>
+<nav><button id="toHistory" class="active">历史记录</button><button id="toWx">微信接收</button></nav>
+<section id="history"><div class="tools"><input id="search" type="search" placeholder="搜索文件名、网址或文字" aria-label="搜索记录"><button id="add" class="green">＋ 收存</button></div>
+<div id="filters" aria-label="内容类型"></div><div id="list" aria-live="polite"></div></section>
+<section id="wechat" hidden><div id="wxProblem" hidden><p id="wxReason"></p><button id="reconnect">重新连接</button></div></section>
+<footer><span class="dot"></span><span id="status" role="status">本机历史</span></footer>
+</main>
+<dialog id="addBox"><h2>收存内容</h2><button id="import">从电脑选择文件…</button><button id="paste">从剪贴板收存</button><label for="draft">文字或网址</label><textarea id="draft" rows="4" placeholder="输入一个点子，或粘贴网页链接"></textarea><div class="actions"><button data-close="addBox">取消</button><button class="green" id="saveNote">保存</button></div></dialog>
+<dialog id="prefs"><h2>设置</h2><label class="switch"><input type="checkbox" id="autorun"> 登录 Windows 后启动悬浮窗</label><p>历史文件保存在项目的 data 文件夹。备份时先退出浮笺，再复制整个 data 文件夹。</p><div class="actions"><button id="quit">退出浮笺</button><button data-close="prefs" class="green">完成</button></div></dialog>
+<script src="ui.js"></script></body></html>
